@@ -44,4 +44,26 @@ public class GestionareCereriPreAprobare
             cerere.Afiseaza();
         }
     }
+    public void ModificaCerere()
+    {
+        Console.Write("Introduceți ID-ul cererii de modificat: ");
+        int id = int.Parse(Console.ReadLine());
+        var cerere = cereri.Find(c => c.Id == id);
+
+        if (cerere != null && !cerere.Aprobat)
+        {
+            Console.WriteLine("Introduceți noile detalii:");
+            Console.Write("Destinație: ");
+            cerere.Destinatie = Console.ReadLine();
+            Console.Write("Motiv: ");
+            cerere.Motiv = Console.ReadLine();
+            Console.Write("Buget: ");
+            cerere.Buget = decimal.Parse(Console.ReadLine());
+            Console.WriteLine("Cerere modificată cu succes!");
+        }
+        else
+        {
+            Console.WriteLine("Cererea nu poate fi modificată (aprobată sau inexistentă).");
+        }
+    }
 }
