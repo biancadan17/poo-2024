@@ -13,7 +13,7 @@ public class GestionareCereriPreAprobare
             Aprobat = false
         };
 
-        Console.Write("Destinație: ");
+        Console.Write("Destinatie: ");
         cerere.Destinatie = Console.ReadLine();
 
         Console.Write("Motiv: ");
@@ -22,7 +22,7 @@ public class GestionareCereriPreAprobare
         Console.Write("Data (YYYY-MM-DD): ");
         cerere.Data = DateTime.Parse(Console.ReadLine());
 
-        Console.Write("Durată (zile): ");
+        Console.Write("Durata (zile): ");
         cerere.Durata = int.Parse(Console.ReadLine());
 
         Console.Write("Buget: ");
@@ -35,7 +35,7 @@ public class GestionareCereriPreAprobare
         cerere.Tip = (TipDeplasare)int.Parse(Console.ReadLine());
 
         cereri.Add(cerere);
-        Console.WriteLine("Cerere creată cu succes!");
+        Console.WriteLine("Cerere creata cu succes!");
     }
     public void VizualizeazaCereri()
     {
@@ -47,24 +47,24 @@ public class GestionareCereriPreAprobare
 
     public void ModificaCerere()
     {
-        Console.Write("Introduceți ID-ul cererii de modificat: ");
+        Console.Write("Introduceti ID-ul cererii de modificat: ");
         int id = int.Parse(Console.ReadLine());
         var cerere = cereri.Find(c => c.Id == id);
 
         if (cerere != null && !cerere.Aprobat)
         {
-            Console.WriteLine("Introduceți noile detalii:");
-            Console.Write("Destinație: ");
+            Console.WriteLine("Introduceti noile detalii:");
+            Console.Write("Destinatie: ");
             cerere.Destinatie = Console.ReadLine();
             Console.Write("Motiv: ");
             cerere.Motiv = Console.ReadLine();
             Console.Write("Buget: ");
             cerere.Buget = decimal.Parse(Console.ReadLine());
-            Console.WriteLine("Cerere modificată cu succes!");
+            Console.WriteLine("Cerere modificata cu succes!");
         }
         else
         {
-            Console.WriteLine("Cererea nu poate fi modificată (aprobată sau inexistentă).");
+            Console.WriteLine("Cererea nu poate fi modificata (aprobata sau inexistenta).");
         }
     }
 }

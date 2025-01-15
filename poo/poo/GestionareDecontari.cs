@@ -13,10 +13,10 @@ public class GestionareDecontari
             IdCererePreAprobare = idCererePreAprobare,
             Aprobat = false
         };
-        Console.WriteLine("Introduceți documente justificative:");
+        Console.WriteLine("Introduceti documente justificative:");
         while (true)
         {
-            Console.Write("Tip document (0 - Transport, 1 - Masa, 2 - Cazare, -1 pentru a ieși): ");
+            Console.Write("Tip document (0 - Transport, 1 - Masa, 2 - Cazare, -1 pentru a iesi): ");
             int tip = int.Parse(Console.ReadLine());
             if (tip == -1) break;
 
@@ -33,7 +33,7 @@ public class GestionareDecontari
             decont.Documente.Add(document);
         }
         decontari.Add(decont);
-        Console.WriteLine("Cerere de decontare creată cu succes!");
+        Console.WriteLine("Cerere de decontare creata cu succes!");
     }
 
     public void VizualizeazaDecontari()
@@ -52,15 +52,3 @@ public enum TipDocument
     Masa,
     Cazare
 }
-
-
-
-        
-            
-
-        
-    
-
-
-
-

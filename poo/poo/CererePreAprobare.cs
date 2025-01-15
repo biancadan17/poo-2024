@@ -14,6 +14,6 @@ public class CererePreAprobare
 
     public void Afiseaza()
     {
-        Console.WriteLine($"ID: {Id}, Destinație: {Destinatie}, Motiv: {Motiv}, Tip: {Tip}, Aprobat: {Aprobat}");
+        Console.WriteLine($"ID: {Id}, Destinatie: {Destinatie}, Motiv: {Motiv}, Tip: {Tip}, Aprobat: {Aprobat}");
     }
 }

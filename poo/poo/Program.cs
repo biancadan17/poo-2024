@@ -13,20 +13,20 @@ using System;
             while (true)
             {
                 Console.WriteLine("\n===== Meniu Principal =====");
-                Console.WriteLine("1. Creează cerere de pre-aprobare");
-                Console.WriteLine("2. Vizualizează cereri de pre-aprobare");
-                Console.WriteLine("3. Modifică cerere de pre-aprobare");
-                Console.WriteLine("4. Creează cerere de decontare");
-                Console.WriteLine("5. Vizualizează cereri de decontare");
+                Console.WriteLine("1. Creeaza cerere de pre-aprobare");
+                Console.WriteLine("2. Vizualizeaza cereri de pre-aprobare");
+                Console.WriteLine("3. Modifica cerere de pre-aprobare");
+                Console.WriteLine("4. Creeaza cerere de decontare");
+                Console.WriteLine("5. Vizualizeaza cereri de decontare");
                 Console.WriteLine("6. Aproba cerere de pre-aprobare (Manager)");
                 Console.WriteLine("7. Aproba cerere de decontare (Manager)");
-                Console.WriteLine("0. Ieșire");
-                Console.Write("Alege o opțiune: ");
+                Console.WriteLine("0. Iesire");
+                Console.Write("Alege o optiune: ");
                 
                 int optiune;
                 if (!int.TryParse(Console.ReadLine(), out optiune))
                 {
-                    Console.WriteLine("Opțiune invalidă. Încearcă din nou.");
+                    Console.WriteLine("Optiune invalida. Incearcă din nou.");
                     continue;
                 }
 
@@ -42,7 +42,7 @@ using System;
                         gestionareCereri.ModificaCerere();
                         break;
                     case 4:
-                        Console.Write("Introduceți ID-ul cererii de pre-aprobare: ");
+                        Console.Write("Introduceti ID-ul cererii de pre-aprobare: ");
                         int idPreAprobare = int.Parse(Console.ReadLine());
                         gestionareDecontari.CreeazaDecontare(idPreAprobare);
                         break;
@@ -56,10 +56,10 @@ using System;
                         manager.AprobaDecontare(gestionareDecontari);
                         break;
                     case 0:
-                        Console.WriteLine("Ieșire din aplicație...");
+                        Console.WriteLine("Iesire din aplicatie...");
                         return;
                     default:
-                        Console.WriteLine("Opțiune invalidă. Încearcă din nou.");
+                        Console.WriteLine("Optiune invalida. Incearca din nou.");
                         break;
                 }
             }
