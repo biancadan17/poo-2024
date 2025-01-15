@@ -44,6 +44,7 @@ public class GestionareCereriPreAprobare
             cerere.Afiseaza();
         }
     }
+
     public void ModificaCerere()
     {
         Console.Write("Introduceți ID-ul cererii de modificat: ");
@@ -66,4 +67,10 @@ public class GestionareCereriPreAprobare
             Console.WriteLine("Cererea nu poate fi modificată (aprobată sau inexistentă).");
         }
     }
+}
+
+public enum TipDeplasare
+{
+    Interna,
+    Externa
 }
