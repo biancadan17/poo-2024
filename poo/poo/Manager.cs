@@ -18,4 +18,21 @@ public class Manager
             Console.WriteLine("Cerere inexistentă.");
         }
     }
+    public void AprobaDecontare(GestionareDecontari gestionare)
+    {
+        Console.Write("Introduceți ID-ul cererii de decontare de aprobat: ");
+        int id = int.Parse(Console.ReadLine());
+        var decont = gestionare.decontari.Find(d => d.Id == id);
+
+        if (decont != null)
+        {
+            decont.Aprobat = true;
+            Console.WriteLine("Cerere de decontare aprobată cu succes!");
+        }
+        else
+        {
+            Console.WriteLine("Cerere de decontare inexistentă.");
+        }
+    }
 }
+
