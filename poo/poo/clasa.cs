@@ -2,5 +2,5 @@ namespace poo;
 
 public class clasa
 {
-    hekllloid
+    //hekllloid
 }
