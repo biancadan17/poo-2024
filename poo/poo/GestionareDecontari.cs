@@ -32,6 +32,26 @@ public class GestionareDecontari
 
             decont.Documente.Add(document);
         }
+        decontari.Add(decont);
+        Console.WriteLine("Cerere de decontare creată cu succes!");
+    }
+
+    public void VizualizeazaDecontari()
+    {
+        foreach (var decont in decontari)
+        {
+            Console.WriteLine($"ID: {decont.Id}, ID Cerere: {decont.IdCererePreAprobare}, Aprobat: {decont.Aprobat}");
+        }
+    }
+}
+
+
+public enum TipDocument
+{
+    Transport,
+    Masa,
+    Cazare
+}
 
 
 
