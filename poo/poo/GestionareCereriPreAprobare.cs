@@ -37,5 +37,11 @@ public class GestionareCereriPreAprobare
         cereri.Add(cerere);
         Console.WriteLine("Cerere creată cu succes!");
     }
-    
+    public void VizualizeazaCereri()
+    {
+        foreach (var cerere in cereri)
+        {
+            cerere.Afiseaza();
+        }
+    }
 }
