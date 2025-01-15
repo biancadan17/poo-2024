@@ -24,6 +24,15 @@ public class GestionareDecontari
             {
                 Tip = (TipDocument)tip
             };
+            Console.Write("Suma: ");
+            document.Suma = decimal.Parse(Console.ReadLine());
+
+            Console.Write("Detalii: ");
+            document.Detalii = Console.ReadLine();
+
+            decont.Documente.Add(document);
+        }
+
 
 
         
